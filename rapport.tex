@@ -1,0 +1,73 @@
+
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{color,amsmath,xcolor,listings,graphicx}
+\usepackage[francais]{babel}
+\usepackage{gnuplottex}
+\usepackage{hyperref}
+%
+% paramétrage pour les zones de code QNAP
+\lstset{
+    language=Python, commentstyle=\textit, frame=shadowbox,
+    rulesepcolor=\color{gray}, basicstyle=\ttfamily\small, columns=flexible,
+    tabsize=4, extendedchars=true, showspaces=false,
+    showstringspaces=false, numbers=left, numberstyle=\tiny,
+    breaklines=true, breakautoindent=true, captionpos=b, morecomment=[l]{//}
+}
+%
+%language=Octave %-> choose the language of the code
+%basicstyle=\footnotesize %-> the size of the fonts used for the code
+%numbers=left %-> where to put the line-numbers
+%numberstyle=\footnotesize %-> size of the fonts used for the line-numbers
+%stepnumber=2 -> the step between two line-numbers.
+%numbersep=5pt -> how far the line-numbers are from the code
+%backgroundcolor=\color{white} -> sets background color (needs package)
+%showspaces=false -> show spaces adding particular underscores
+%showstringspaces=false -> underline spaces within strings
+%showtabs=false -> show tabs within strings through particular underscores
+%frame=single -> adds a frame around the code
+%tabsize=2 -> sets default tab-size to 2 spaces
+%captionpos=b -> sets the caption-position to bottom
+%breaklines=true -> sets automatic line breaking
+%breakatwhitespace=false -> automatic breaks happen at whitespace
+%morecomment=[l]{//} -> displays comments in italics (language dependent)
+%
+%
+% infos du document
+\title{QNAP}
+\author{Boulic Guillaume, Émeric Tosi}
+\date{\today}
+%
+%
+\begin{document}
+%
+    \maketitle{}
+%
+    \setcounter{tocdepth}{1} % définir la profondeur de l'Index
+    \renewcommand{\contentsname}{Sommaire} % renommer l'Index en Sommaire
+    \tableofcontents{} % afficher l'Index
+%
+    \clearpage
+%
+%
+% Differentes Parties / Chapitres / Autres fichiers à inclure :
+%
+%
+\input{partie-1.tex}
+\clearpage
+%
+%
+\input{partie-2.tex}
+\clearpage
+%
+%
+\input{annexes.tex}
+\clearpage
+%
+%
+%\listoffigures % index des images du rapport
+%\clearpage
+%
+% fin
+\end{document}
+%
